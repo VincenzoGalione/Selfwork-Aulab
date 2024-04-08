@@ -1,0 +1,38 @@
+h1,h2,h3{ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{font-family: Arial, Helvetica, sans-serif;
+}
+#titolo{
+    color: #ecec0e;
+}
+
+ #titolo:hover{
+    color: red;
+} 
+
+.sottotitolo{
+    color: rgb(255, 0, 0);
+}
+.paragrafo{
+    color: aqua;
+}
+.back{
+    background-color: rgb(0, 0, 0);
+}
+
+.suggerito{
+  color: orange;
+} 
+
+.ft{
+    background-image:url(./media/footer.jpg);
+}
+
+.anchor{ 
+  color: blue;    
+}
+
+.anchor:hover{
+    color: red;
+}
