@@ -1,38 +1,214 @@
-h1,h2,h3{ font-family: Verdana, Geneva, Tahoma, sans-serif;
+h1,h2,h3{ font-family:"Electrolize", sans-serif;
 }
 
-p{font-family: Arial, Helvetica, sans-serif;
+*{font-family: "Roboto", sans-serif;
 }
-#titolo{
+
+body{
+    margin: 0vh;
+}
+
+
+nav{
+    background-color:rgb(117, 115, 115) ;
+    margin: 0px;
+    position: sticky;
+    top: 0px;  
+}
+
+nav>img{
+    width: 150px;
+    height: 150px;
+}
+
+.bottonenav{
+    background-color:black;
+    
+    
+}
+
+.bottonenav:hover{
+    border-bottom: #ecec0e;
+    border:solid 3px #ecec0e;
+}
+
+
+.lista{
+    list-style-type: none;
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+    
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    
+    
+    
+}
+
+header{
+    background-image: url(./media/background.jpg) ;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+    
+}
+
+#h1{
     color: #ecec0e;
+    /* background-color: rgb(0, 0, 0);*/
+    text-align: center;
+    font-size: 7vh; 
+    width: 100vw;
+    margin: 0px;
+    
+    
+    
+
 }
 
- #titolo:hover{
-    color: red;
+.home{
+    font-size: 1.5vh;
+    text-decoration: none;
+    color:#ecec0e;
+   
+   
+
+}
+
+.home:hover{
+color: orange;
+}
+
+ #h1:hover{
+    color: orange;
 } 
 
-.sottotitolo{
-    color: rgb(255, 0, 0);
+.immagine{
+    height: 200px;
 }
-.paragrafo{
-    color: aqua;
+
+.sezione{
+    display: flex;
+    justify-content: space-evenly;  
 }
-.back{
+
+.bottone{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.articolo{
     background-color: rgb(0, 0, 0);
+    width: 50vh;
+    display: inline-block;
+    border:solid #ecec0e;
+    color: white;
+}
+
+
+.btnarticle{
+   background-color: rgb(0, 0, 0);
+   color: white; 
+   border: 1.5px  solid #ecec0e;
+   margin: 0px;
+}
+
+.btnarticle:hover{
+    background-color:rgb(228, 228, 19);
+}
+
+ .a{
+    text-decoration: none;
+   color: white;
+}  
+
+.h2{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 3px 3px 3px  yellow;
+}
+
+.h4{
+    color:#ecec0e;
+    font-size: 2vh;
+}
+
+.continualeggere{
+    text-decoration: none;
+    color: blue;
+}
+
+.continualeggere:hover{
+    color: red;
 }
 
 .suggerito{
-  color: orange;
+  color: rgb(0, 0, 0);
 } 
 
 .ft{
-    background-image:url(./media/footer.jpg);
+    background-color: rgb(75, 74, 74);
+    min-height: 25vh;
 }
 
 .anchor{ 
-  color: blue;    
+  color: rgb(11, 11, 165);    
 }
 
 .anchor:hover{
     color: red;
 }
+
+@media screen and (max-width: 600px){
+
+    .sezione{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .articolo{
+        width: 96vh;
+        margin: 2vh;
+    }
+
+    nav{
+        width: 99vh;
+    }
+
+    header{
+        width: 99vh;
+    }
+
+    .h2{
+        width: 99vh;
+        text-align: center;
+    }
+
+    .ft{
+        width: 99vh;
+    }
+
+    .home{
+        font-size: 3vh;
+    }
+
+
+}
+  
+   
+
+    
