@@ -4,73 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selfwork</title>
-
+     
+    <!--CDN google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <!-- navbar -->
      <nav>
-        <img src="./media/logo.png" alt="logo aulab">
-        <h4>contattaci 800 128 626</h4>
-        <ul>
-           <li><button><a href="https://aulab.it/hackademy-full-time">CORSI</a></button></li>
-            <li><button><a href="https://aulab.it/guide#">GUIDE</a></button></li>
-            <li><button><a href="https://aulab.it/blog">BLOG</a>
-            </button></li>
-            <li><button><a href="https://aulab.it/lavora-con-noi">LAVORA CON NOI</a></li></button>
-        </ul>
+          <img src="./media/logo.png" alt="logo aulab">
+          <h4>contattaci 800 128 626</h4>
+          <ul class="lista">
+             <li><a class="link" href="https://aulab.it/hackademy-full-time"><bottom class="bottonenav">CORSI</bottom></a></li>
+             <li><a class="link" href="https://aulab.it/blog"> <bottom class="bottonenav">PERCHÉ AULAB?</bottom></a></li>
+             <li><a class="link" href="https://aulab.it/guide#"><bottom class="bottonenav">GUIDE</bottom></a></li>
+             <li><a class="link" href="https://aulab.it/blog"><bottom class="bottonenav">BLOG</bottom></a></li>
+             <li><a class="link" href="https://aulab.it/lavora-con-noi"><bottom class="bottonenav">LAVORA CON NOI</bottom></a></li>
+             <li><a class="link" href="https://aulab.it/hackademy-full-time"><bottom class="bottonenav">SEI UN’AZIENDA?</bottom></a></li>
+             <li><bottom class="bottonenav">ciao</bottom></li>
+           </ul>
      </nav>
- 
+
     <!-- titolo del sito -->
     <header>
-        <h1 id="titolo" class="back"> Blog</h1>
-        <a href="https://aulab.it/">home >></a>
+        <h1 id="h1"> Blog Aulab</h1>
+        <a class="home" href="https://aulab.it/">home >></a>
     </header>
    
    <!-- sezione articoli -->
     <main>
-       <h2 class="sottotitolo"> Articoli in evidenza</h2>
-      
+       <h2 class="h2"> Articoli in evidenza</h2>
+    
        <!-- articolo 1 -->
-       <article>
-        <img src="./media/im 1.jpg" alt="immagine1">
-        <p>31/08/2023</p>
-         <h4 class="paragrafo">Cos’è il linguaggio HTML e come impararlo</h4>
-         <p>Il linguaggio HTML (Hypertext Markup Language) è uno dei più conosciuti e diffusi: lo si trova infatti praticamente in tutte le pagine web esistenti. È una scelta popolare tra i principianti che si…</p>
-         <button><a href="https://aulab.it/notizia/250/cose-il-linguaggio-html-e-come-impararlo">Leggi tutto >></a></button>
-       </article>
+       <section class="sezione">
+         <article class="articolo">
+             <div class="bottone">
+                 <img src="./media/im 1.jpg" alt="immagine1" class="immagine">   
+                 <p>31/08/2023</p>
+                 <h4 class="h4">Cos’è il linguaggio HTML e come impararlo</h4>
+                 <p>Il linguaggio HTML (Hypertext Markup Language) è uno dei più conosciuti e diffusi: lo si trova infatti praticamente in tutte le pagine web esistenti. È una scelta popolare tra i principianti che si…</p>
+                 <button class="btnarticle"><a class="a"  href="https://aulab.it/notizia/250/cose-il-linguaggio-html-e-come-impararlo">Leggi tutto >></a></button>
+              </div>
+           
+          </article>
       
-       <!-- articolo 2 -->
-       <article>
-        <img src="./media/im 2.jpg" alt="immagine2">
-        <p>21 Dicembre 2020</p>
-        <h4 class="paragrafo">Corso Javascript online: cosa c’è da sapere</h4>
-        <p>Essere uno sviluppatore web vuol dire imparare più linguaggi di programmazione per poter creare diversi tipi di applicazioni.  Per ogni applicazione, la maggior parte delle volte, …</p>
-        <button><a href="https://aulab.it/notizia/195/corso-javascript-online-cosa-ce-da-sapere">Leggi tutto >></a></button></a>
-       </article>
+         <!-- articolo 2 -->
+         <article class="articolo">
+             <div class="bottone">
+                 <img src="./media/im 2.jpg" alt="immagine2" class="immagine">
+                 <p>21 Dicembre 2020</p>
+                 <h4 class="h4">Corso Javascript online: cosa c’è da sapere</h4>
+                 <p>Essere uno sviluppatore web vuol dire imparare più linguaggi di programmazione per poter creare diversi tipi di applicazioni.  Per ogni applicazione, la maggior parte delle volte, …</p>
+                 <button class="btnarticle"><a class="a" href="https://aulab.it/notizia/195/corso-javascript-online-cosa-ce-da-sapere">Leggi tutto >></a></button></a>
+             </div>
+         </article>
 
-       <!-- articolo 3 -->
-       <article>
-        <img src="./media/im 3.jpg" alt="immagine3">
-        <p>1 Dicembre 2020</p>
-        <h4 class="paragrafo">Come imparare a programmare con un corso PHP</h4>
-        <p> Un buon programmatore, si sa, necessita di un ampio bagaglio di conoscenze per potersi districare tra le difficoltà che questo mestiere comporta. Oggi le richieste sul mercato sono molteplic…</p>
-        <button><a href="https://aulab.it/notizia/195/corso-javascript-online-cosa-ce-da-sapere">Leggi tutto >></a></button>
-       </article>
+         <!-- articolo 3 -->
+          <article class="articolo">
+             <div class="bottone">
+                 <img src="./media/im 3.jpg" alt="immagine3" class="immagine">
+                 <p>1 Dicembre 2020</p>
+                 <h4 class="h4">Come imparare a programmare con un corso PHP</h4>
+                 <p> Un buon programmatore, si sa, necessita di un ampio bagaglio di conoscenze per potersi districare tra le difficoltà che questo mestiere comporta. Oggi le richieste sul mercato sono molteplic…</p>
+                 <button class="btnarticle"><a class="a" href="https://aulab.it/notizia/195/corso-javascript-online-cosa-ce-da-sapere">Leggi tutto >></a></button>
+             </div>
+         </article>
+       </section>
     </main> 
 
     <!-- section articolo suggerito -->
 <section>
  <article>
-    <h4>articoli suggeriti</h4>
+    <h4 >articoli suggeriti</h4>
     <img src="./media/img5.jpeg" alt="articolo suggerito">
     <h3 class="suggerito">5 Metodi delle liste in Python fondamentali per un Data Analyst</h3>
     <p>
         Python cos’è? Il linguaggio Python è diventato uno strumento essenziale nel bagaglio culturale di ogni data analyst. La sua sintassi chiara e flessibile lo rende accessibile anche a chi è alle p…
     </p>
  </article>
-   <button><a href="https://aulab.it/5-metodi-delle-liste-in-python-fondamentali-per-un-data-analyst">Continua a leggere</a></button>
+   <a class="continualeggere" href="https://aulab.it/5-metodi-delle-liste-in-python-fondamentali-per-un-data-analyst">Continua a leggere>></a>
 </section>
 
 <!-- footer -->
