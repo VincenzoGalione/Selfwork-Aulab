@@ -8,17 +8,15 @@ body{
     margin: 0vh;
 }
 
-nav{
+ nav{
     background-color:rgb(117, 115, 115) ;
     margin: 0px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: sticky;
-    top: 0px;  
-    width: 100vw;
-    height: 13vh;
-}
+    align-items: center;
+    
+} 
 
 nav>img{
     
@@ -27,13 +25,13 @@ nav>img{
 
 .lista{
     list-style-type: none;
-    margin: 0px;
     background-color: rgb(0, 0, 0);
     display:flex;
-    justify-content: space-evenly;
-    height: 50px;
+    justify-content: space-evenly; 
+    height: 50px; 
     align-items: center;  
-} 
+    justify-content: baseline;
+}    
 
 .link{
     text-decoration: none;
@@ -48,20 +46,20 @@ nav>img{
 
 header{
     background-image: url(./media/background.jpg) ;
-    height: 80vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
     background-attachment: fixed;
     display: flex ;
     flex-direction: column;
     align-items: center;
     justify-content:center ;
-}
+} 
 
   #h1{
     color: #ecec0e; 
     font-size: 10vh; 
+    text-align: center ;
     
 }  
 
@@ -82,31 +80,36 @@ color: orange;
     color: orange;
 } 
 
-.immagine{
-    height: 200px;
+.ImgArticle{
+    width: 300px;
 }
 
-.sezione{
+.conteinerarticle{
+    display: flex; 
+    width: 60%; 
+}    
+
+ aside{
+    background-color: rgb(0, 0, 0);
+    border: 0.25px; ;
+    border:solid #ecec0e; 
+    color: white;
+    width: 40%;
     display: flex;
-    justify-content: space-evenly;  
-    width: 100vw;
-}
-
-.bottone{
-    display:flex;
     flex-direction: column;
-    align-items: center;
-    
-    
-}
+    justify-content: center; 
+} 
 
 .articolo{
     background-color: rgb(0, 0, 0);
-    width: 50vh;
-    display: inline-block;
-    border:solid #ecec0e;
+    bottom: 0.25px; 
+    border:solid #ecec0e;  
     color: white;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+} 
 
 .btnarticle{
    background-color: rgb(0, 0, 0);
@@ -121,20 +124,18 @@ color: orange;
 
  .a{
     text-decoration: none;
-   color: white;
+    color: white;
 }  
 
-.sectionevidenza{
+ .sectionevidenza{
     display: flex;
     justify-content: center;
-    width: 100%;
-    
-    
-    
-}
+      
+} 
 
 main{
     display: flex;
+    margin: 0px;
 }
 
 .articolosuggerito{
@@ -151,13 +152,12 @@ main{
 }
 
 .imgsuggerito{
-    width: 30vw;
+    width: 70vw;
 }
 
 .h2{
-     /* text-align: center; */
-    font-size: 50px; 
     text-shadow: 3px 3px 3px  yellow;
+    font-size: 4vh;
 }
 
 .h4{
@@ -174,46 +174,47 @@ main{
     color: red;
 }
 
-.conteinerbottonesu{
-   position: relative;
-  bottom: 20px; 
-  right: 20px;                        
-}
-
 .bottonesu{
-    height: 4.5vh;
+    width: 50px;
+    height: 50px;
     background-color:#ecec0e;
-    cursor: pointer;
-     margin: auto;
-    text-shadow:0 0  #ecec0e;
-    box-shadow: 
-        0 0 10px #ecec0e,
-        0 0 20px #ecec0e;
-  position: fixed;  
-  bottom: 0px;
-  right: 0px;
-  display: grid;
-  place-items: center; 
-  border: none; 
-  animation: pulse-animation 2s infinite;
- 
+    animation-name: pulse;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    position: fixed;  
+    bottom: 0px;
+    right: 0px;
 
+
+     
 }
 
-@keyframes pulse-animation {
+@keyframes pulse {
     from {
       box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.6);
     }
     to{
       box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
     }
+    
+    0%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
   }
 
-.ft{
+ .ft{
     background-image: url(./media/footer.jpg);
-    min-height: 25vh;
-    color: white;
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; 
+    margin: 0%;
+} 
+ .testo{
+    margin: 0%;
+ }
 
 .anchor{ 
   color: rgb(242, 247, 0);    
@@ -223,58 +224,27 @@ main{
     color: red;
 }
 
-@media screen and (max-width: 600px){
 
-    .sezione{
+@media screen and (max-width: 670px){
+
+    .lista{
+        height:50vh ;
         display: flex;
         flex-direction: column;
-        
-        
-        
     }
 
-    .articolo{
-        width: 96vh;
-        margin: 2vh;
+    .conteinerarticle{
+        flex-direction: column;
     }
 
-    nav{
-        width: 98.5vh;
+    .ImgArticle{
+        width: 53vw;
     }
-
-    header{
-        width: 99vh;
-    }
-
-    .h2{
-        width: 99vh;
-        text-align: center;
-    }
-
-    .ft{
-        width: 99vh;
-    }
-
-    .home{
-        font-size: 3vh;
-    }
-
-    .bottonesu{
-        height: 3.5vh;
-        
-    }
-
-    .sectionevidenza{
-        width: 100vh;
-        
-    }
-
-    .articolosuggerito{
-       width: 99vh;
-       margin-left: 1vh;
-    }
-
     
+    .bottonesu{
+        height: 40px;
+        width: 40px; 
+    }
 }
 
   
