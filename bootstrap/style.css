@@ -33,22 +33,3 @@ h1{
     letter-spacing: 5px;
 }
 
-.immagine{
-    height: 25vh;
-    margin-top: 5px;
-     
-}
-
-@media screen and (max-width: 1368px){
-    .immagine{
-        height: 12vh
-    }
-}
-
-@media screen and (max-width: 768px){
-    .immagine{
-        height: 8vh;
-    }
-    
-}  
-
