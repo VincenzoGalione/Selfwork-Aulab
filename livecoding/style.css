@@ -6,7 +6,11 @@ h1,h2,h3,h4,p{
     color: var(--main);
 }
 
-/* prima sezione */
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* header */
 .bg1{
     background-image: url(./media/bg-1.jpg);
 }
@@ -26,12 +30,16 @@ h1,h2,h3,h4,p{
 .btn1{
     background-color: transparent;
     border-radius: 30px;
-    border-color: yellow;
-    border: 3px solid;
+    border: 3px solid yellow;
     height: 60px;
-    width: 270px;
-    letter-spacing: 2px;
+    width: 280px;
     color: yellow;
+}
+
+.btn1:hover{
+    background-color: yellow;
+    color: black;
+    transition: 0.5s;
 }
 
 
@@ -49,14 +57,12 @@ h1,h2,h3,h4,p{
 .col-custom{
     background-color: rgb(41, 3, 58);
     border-radius: 10px;
-    height: 70vh  ;
+    height: 75vh  ;
     width: 50vh !important;
-    margin-top: 10vh;
+    
 }
 
-::placeholder{
-    color: rgb(143, 143, 143) !important;
-}
+
 
 .bg-3{
     background-image:url(./media/bg-2.jpg);
@@ -64,25 +70,21 @@ h1,h2,h3,h4,p{
     background-size: cover;
 }
 
-.form-custom{
-    width: 400px;
-}
 
 .calendar2{
     color: rgb(250, 244, 244);
     background-color: rgb(231, 231, 12);
     border-radius: 50%;
     padding: 12px;
+    margin-right: 20px;
 }
   
-.orario{
-    margin-left: 8.5vh;
-}
 
 .form-element{
     background-color: transparent;
     border: none;
     border-bottom: 3px solid purple;
+    height: 5vh;
 
 }
 
@@ -99,13 +101,15 @@ h1,h2,h3,h4,p{
     color: yellow;
 }
 
-.icon-gaming1{
-    height: 400px; ;
+.s1{
+    padding: 100px 20px;
 }
 
 /* quinta sezione */
 .bg5{
     background-image: url(./media/bg-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
    
 }
 
@@ -113,9 +117,6 @@ h1,h2,h3,h4,p{
     color: yellow;
 }
 
-.marco-img{
-    height: 550px;
-}
 
 
 @media screen and (max-width: 600px){
@@ -135,8 +136,5 @@ h1,h2,h3,h4,p{
         height: 40vh;
     }
 
-    /* footer */
-    footer{
-        margin-bottom: 24.5vh;
-    }
+    
 }
