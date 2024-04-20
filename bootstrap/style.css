@@ -1,26 +1,28 @@
-h1,h2,h3{ font-family:"Electrolize", sans-serif;
+
+.logo{
+    height: 100px;
 }
 
-*{font-family: "Roboto", sans-serif;
+nav{
+    background-color: rgb(4, 189, 149);
 }
 
-:root{
-    --main:#bff0d4;
-    --sec:rgb(4, 189, 149);;
-    --acc:rgb(226, 178, 107);
+.listalink{
+    list-style-type: none;
+    margin: 0px;
+     
 }
 
-.bg-custom{
-    background-color: var(--sec);
+.link{
+    text-decoration: none;
+    margin-right:2vh;
+    color: rgba(255, 193, 7, 1);
 }
-
 
 header{
     background-image: url(./media/fondo-senza-cuciture-con-i-simboli-tradizionali-della-sicilia-103389412.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 90px;
-    margin-bottom:  20px; ;
 }
 
 h1{
@@ -31,33 +33,3 @@ h1{
     letter-spacing: 5px;
 }
 
-.logo{
-    width: 110px;
-}
-
-.list-custom{
-    font-size: 20px;
-}
-
-.titolo-card{
-    font-size: 50px;
-    margin: 3vh; 
-    text-align: center; 
-    color: rgb(4, 189, 149);; 
-}
-
-.card-body{
-    background-color: var(--acc);
-}
-
-.card{
-    transition: 0.4s;
-}
-
-.card:hover{
-    transform: scale(1.1);
-}
-
-.btn-custom{
-   background-color: var(--sec); 
-}
