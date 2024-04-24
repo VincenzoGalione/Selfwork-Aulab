@@ -1,0 +1,140 @@
+:root{
+    --main:white
+}
+
+h1,h2,h3,h4,p{
+    color: var(--main);
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* header */
+.bg1{
+    background-image: url(./media/bg-1.jpg);
+}
+
+.logo{
+    width: 200px;   
+}
+
+.consolearcade{
+    height: 700px;
+}
+
+.calendar1{
+  color: yellow;
+}
+
+.btn1{
+    background-color: transparent;
+    border-radius: 30px;
+    border: 3px solid yellow;
+    height: 60px;
+    width: 280px;
+    color: yellow;
+}
+
+.btn1:hover{
+    background-color: yellow;
+    color: black;
+    transition: 0.5s;
+}
+
+
+/* seconda sezione */
+.bg2{
+    background-color: rgb(64, 24, 102);
+}
+
+.icon-gaming{
+    height: 500px;
+}
+
+/* terza sezione */
+
+.col-custom{
+    background-color: rgb(41, 3, 58);
+    border-radius: 10px;
+    height: 75vh  ;
+    width: 50vh !important;
+    
+}
+
+
+
+.bg-3{
+    background-image:url(./media/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.calendar2{
+    color: rgb(250, 244, 244);
+    background-color: rgb(231, 231, 12);
+    border-radius: 50%;
+    padding: 12px;
+    margin-right: 20px;
+}
+  
+
+.form-element{
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid purple;
+    height: 5vh;
+
+}
+
+.btn2{
+   background-color: yellow; 
+   border-radius: 30px;
+   height: 40px;
+   width: 350px;
+}
+
+
+/* quarta sezione  */
+.who{
+    color: yellow;
+}
+
+.s1{
+    padding: 100px 20px;
+}
+
+/* quinta sezione */
+.bg5{
+    background-image: url(./media/bg-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.marcotext{
+    color: yellow;
+}
+
+
+
+@media screen and (max-width: 600px){
+
+    /* prima sezione */
+    .consolearcade{
+        height: 50vh;
+    }
+    
+    /* terza sezione */
+    .col-custom{
+        margin-top: 0vh;
+    }
+
+    /* quarta sezione  */
+    .icon-gaming{
+        height: 40vh;
+    }
+
+    
+}

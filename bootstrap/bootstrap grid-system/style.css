@@ -1,0 +1,35 @@
+
+.logo{
+    height: 100px;
+}
+
+nav{
+    background-color: rgb(4, 189, 149);
+}
+
+.listalink{
+    list-style-type: none;
+    margin: 0px;
+     
+}
+
+.link{
+    text-decoration: none;
+    margin-right:2vh;
+    color: rgba(255, 193, 7, 1);
+}
+
+header{
+    background-image: url(./media/fondo-senza-cuciture-con-i-simboli-tradizionali-della-sicilia-103389412.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 7vh;
+    background-color: rgb(226, 178, 107);
+    letter-spacing: 5px;
+}
+
