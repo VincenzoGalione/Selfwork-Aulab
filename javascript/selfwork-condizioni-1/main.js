@@ -1,5 +1,5 @@
 // if/else  if/else
-let voto = 30;
+let voto = 200;
 
 // if (voto < 18) {
 //     console.log('insufficente');  
@@ -20,32 +20,35 @@ let voto = 30;
 
 // switch
 
+let valutazione;
 switch (true) {
     case voto < 18:
-        console.log('insufficente');
+        valutazione = 'insufficente'
     break;
 
     case voto >= 18 &&  voto < 21:
-        console.log('sufficente');
+        valutazione ='sufficente'
     break;
 
     case voto >= 21 &&  voto < 24:
-        console.log('buono');
+        valutazione ='buono';
     break;
 
     case voto >= 24 &&  voto < 27:
-        console.log('distinto');
+        valutazione ='distinto';
     break;
 
     case voto >= 27 &&  voto <= 29:
-        console.log('ottimo');
+        valutazione ='ottimo';
     break;
 
     case voto == 30:
-        console.log('eccellente');
+        valutazione ='eccellente';
     break;
     
     default:
-        console.log('Questo voto non è valido');
+        valutazione ='Questo voto non è valido';
     break;
 }
+
+console.log(valutazione);
