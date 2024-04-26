@@ -19,7 +19,7 @@ let voto = 30;
 
 
 // switch
-let valutazione;
+
 switch (true) {
     case voto < 18:
         console.log('insufficente');
@@ -40,7 +40,7 @@ switch (true) {
     case voto >= 27 &&  voto <= 29:
         console.log('ottimo');
     break;
-    
+
     case voto == 30:
         console.log('eccellente');
     break;
