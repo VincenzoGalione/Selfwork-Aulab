@@ -1,19 +1,19 @@
-let numero;
-let pari = 0;
-let dispari = 0;
+ let counter = 0
+let n_dispari = 0;
 
 
 
 for (let i = 1; i <= 20; i++) {
-         pari = i % 2
-         if (pari ===0) {
-            console.log(pari);
-         }else {
-            console.log(dispari);
+         if (i % 2 == 0) {
+            console.log(i);
+         }else{
+            n_dispari = n_dispari + i;
+            counter ++
          }
-          
          
        }
    
-
+       console.log(`dispari = ${n_dispari}`);
+       console.log(`counter = ${counter}`);
+       console.log(`media = ${n_dispari/counter}`);
 
