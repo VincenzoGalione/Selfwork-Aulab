@@ -1,22 +1,15 @@
-function numbers(n) {
-    for (let i = 1 ; i <= n; i++) {
-       console.log(i); 
+function numbers (n){
+    for (let i = 1; i <= n; i++) {
+        if (i % 15  == 0) {
+            console.log('FizzBuzz');
+        }else if (i % 5 == 0) {
+            console.log('Buzz');
+        }else if (i % 3 == 0) {
+            console.log('Fizz');
+        }else{
+            console.log(i);
+        }  
     }
-
-    
-    return i;
 }
 
-let nb = i;
-
-if (nb % 3 == 0) {
-    nb = 'Fizz'
-} else if (n % 5 == 0) {
-    nb = 'Buzz'
-}else {
-    
-}
-
-
-  
-let numero = numbers (45);
+numbers(100)
