@@ -1,11 +1,20 @@
-let bevande = prompt('1 Acqua \n 2 Coca-cola \n 3 Birra');
-if (bevande == 1) {
-    console.log('E’ stata selezionata l’acqua');
-}else if (bevande == 2) {
-     console.log('E’ stata selezionata coca cola');
-} else if (bevande == 3) {
-    console.log('E’ stata selezionata birra');
-}else {
-    prompt(' Attenzione numero non valido!, riprova: \n1 Acqua \n 2 Coca-cola \n 3 Birra')
-}
-   
+
+let scelta;
+
+do {
+    scelta =Number(prompt('Inserisci il numero corrispondente alla bevanda:\n 1 Acqua \n 2 Coca-cola \n 3 Birra'));
+    switch (scelta) {
+        case 1:
+            console.log('E’ stata selezionata l’acqua');
+            break;
+        case 2:
+            console.log('E’ stata selezionata la coca cola');
+             break;
+        case 3:
+            console.log('E’ stata selezionata la birra');
+         break;
+        default:
+            console.log('la scelta inserita non è valida, riprova');
+            break;
+    }
+} while (scelta <1 || scelta > 3 );
