@@ -5,9 +5,7 @@ function lanci(giocatore){
     let punteggio = 0;
     
     for (let i = 0; i < n; i++) {
-        punteggio +=Math.floor(Math.random() * (6 - 1) + 1);
-         
-         
+        punteggio +=Math.floor(Math.random() * (6 - 1) + 1);    
     }
 
     return punteggio;
@@ -22,6 +20,8 @@ console.log(` Il totale di Matteo è ${player2}`);
 
 if (player1 > player2) {
     console.log(`Il vincitore è Vincenzo`);
-}else {
-    console.log(`Il vincitore è Matteo`);
+}else if (player1 < player2){
+    console.log(`Il vincitore è Matteo`)
+}else{
+    console.log('Pareggio');
 }
