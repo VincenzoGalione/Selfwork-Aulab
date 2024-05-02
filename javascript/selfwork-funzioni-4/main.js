@@ -1,7 +1,7 @@
 function frase(str){ 
-    let nstr = str.replace(/\W/g, "")
+    let nstr = str.replace(/\W/g, "").toLowerCase();
     console.log(nstr);
-    let reversed = str.split('').reverse().join('').replace(/\W/g, "");
+    let reversed = nstr.split('').reverse().join('');
     console.log(reversed);
     if (nstr == reversed) {
        return 'TRUE'
@@ -11,7 +11,7 @@ function frase(str){
     
 }
 
-console.log(frase('i topi non avevano nipoti'));
+console.log(frase('I Topi non Avevano nipoti'));
 console.log(frase('tutti mangiano la pizza'));
 
 
