@@ -24,17 +24,25 @@
         }
     },
 
-    rimuovi_aggiungi_contatto : function (nome, telefono){
+    rimuovi_contatto : function (nome, telefono){
         let contatto = this.contatti.find(contatto => contatto.nome == nome)
-        let index = this.contatti.indexOf(contatto);
-        if (contatto) {
+        let index = this.contatti.indexOf(contatto); 
             this.contatti.splice(index, 1)
             console.log('Il contatto è stato eliminato');
-        }else{
-            this.contatti.push({nome: nome, telefono: telefono})
-            console.log('Il contatto è stato aggiunto');
-        }
+        
+        
     },
+
+    
+    aggiungi_contatto : function (nome, telefono){
+        let contatto = this.contatti.find(contatto => contatto.nome == nome)
+        let index = this.contatti.indexOf(contatto);
+       
+        this.contatti.push({nome: nome, telefono: telefono})
+        console.log('Il contatto è stato aggiunto');
+
+    },
+
 
     modifica_contatto : function(nome, nuovo_numero){
         let contatto = this.contatti.find(contatto => contatto.nome == nome)
@@ -55,10 +63,10 @@ agenda.mostra_contatti();
 agenda.mostra_contatto('Anna')
  
 // rimuovi contatto
-agenda.rimuovi_aggiungi_contatto('Maria');
+agenda.rimuovi_contatto('Maria');
  
 // aggiungi contatto
-agenda.rimuovi_aggiungi_contatto(nome, telefono)
+agenda.aggiungi_contatto(nome, telefono)
  
 // modifica contatto
 agenda.modifica_contatto('Paolo', 4)
