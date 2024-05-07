@@ -10,7 +10,7 @@ let bowling = {
         this.giocatori.forEach(giocatore => {
             for (let i = 1; i <= 10 ; i++) {
                 giocatore.punteggi.push(Math.floor(Math.random() * (10 - 1 +1) + 1))   
-            }
+            };
             giocatore.punteggi.sort((a,b)=> b-a);
             console.log(giocatore);     
         })
@@ -32,10 +32,10 @@ let bowling = {
     
     totale_punteggi : function(){
         this.giocatori.forEach(giocatore =>{
-        let tot = giocatore.punteggi.reduce((acc,n)=> acc + n);  
-        giocatore.totale = tot
-        console.log(`Il Punteggio totale di  ${giocatore.nome} è  di ${tot} punti`);
-        })
+            let tot = giocatore.punteggi.reduce((acc,n)=> acc + n);  
+            giocatore.totale = tot
+         })
+        this.giocatori.sort((a,b)=> b.totale-a.totale);
         
     },
    
