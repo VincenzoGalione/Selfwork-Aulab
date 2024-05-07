@@ -16,30 +16,39 @@ let bowling = {
         })
         
     },
-    
+
     aggiungi_giocatore : function(nome){
-        let nuovo_giocatore = {name:nome , punteggi:[]}
+        let nuovo_giocatore = {nome:nome , punteggi:[]}
         for (let i = 1; i <= 10 ; i++) {
             nuovo_giocatore.punteggi.push(Math.floor(Math.random() * (10 - 1 +1) + 1))   
         }
         this.giocatori.push(nuovo_giocatore)
         nuovo_giocatore.punteggi.sort((a,b)=> b-a);
-        console.log(`Il nuovo giocatore ${nuovo_giocatore.name} è stato aggiunto`);
+        console.log(`Il nuovo giocatore ${nuovo_giocatore.nome} è stato aggiunto`);
         console.log(nuovo_giocatore);
     },
     
     
+    
     totale_punteggi : function(){
         this.giocatori.forEach(giocatore =>{
-        let totale_punteggio = giocatore.punteggi.reduce((acc,n)=> acc + n);  
-        console.log(`Il Punteggio totale di ${giocatore.nome}  ${totale_punteggio}`);
+        let tot = giocatore.punteggi.reduce((acc,n)=> acc + n);  
+        giocatore.totale = tot
+        console.log(`Il Punteggio totale di  ${giocatore.nome} è  di ${tot} punti`);
         })
-   
+        
     },
    
     vincitore : function(){
-     let winner = this.giocatori[0]
-     console.log(`Il vincitore è ${winner.name} con ${winner.totale}`); 
+        let winner = this.giocatori[0]
+        console.log(`Il vincitore è ${winner.nome} con ${winner.totale} punti`); 
+    },
+
+    classifica : function(){
+        console.log('La classifica è');
+        this.giocatori.forEach(giocatore => {
+        console.log(`${giocatore.nome}`);
+        })
     }
     
 }
@@ -48,4 +57,4 @@ bowling.imposta_punteggi()
 bowling.aggiungi_giocatore('Alex')
 bowling.totale_punteggi()
 bowling.vincitore()
-
+bowling.classifica()
