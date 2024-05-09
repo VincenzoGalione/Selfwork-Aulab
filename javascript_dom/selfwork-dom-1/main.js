@@ -1,11 +1,11 @@
 
 let paragrafi = document.querySelectorAll('p')
-let btnColor = document.querySelectorAll('#btnColor')
-let grBtn = document.querySelectorAll('#grBtn')
-let noneBtn = document.querySelectorAll('#noneBtn')
+let colorBtn = document.querySelector('#colorBtn')
+let grBtn = document.querySelector('#grBtn')
+let noneBtn = document.querySelector('#noneBtn')
 
 
-btnColor.addEventListener('click', ()=>{
+colorBtn.addEventListener('click', ()=>{
     paragrafi.forEach(paragrafo =>{
         let r = Math.floor(Math.random() * 256);  
         let g = Math.floor(Math.random() * 256);
@@ -16,7 +16,19 @@ btnColor.addEventListener('click', ()=>{
 
 
 grBtn.addEventListener('click', ()=>{
-    paragrafi.forEach(paragrafo=>{
+    paragrafi.forEach(paragrafo =>{
         paragrafo.style.fontWeight = 'bold'
+    })
+})
+
+
+
+noneBtn.addEventListener('click', ()=>{
+    paragrafi.forEach(paragrafo =>{
+        if (paragrafo.style.display == 'block') {
+            paragrafo.style.display = 'none'
+        } else {
+            paragrafo.style.display = 'block' 
+        }
     })
 })
