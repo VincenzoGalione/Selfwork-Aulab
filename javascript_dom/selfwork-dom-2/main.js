@@ -9,9 +9,10 @@ let btn = document.querySelector('.btn')
 btn.addEventListener('click',()=>{
     let date = new Date();
     let formatDate = date.toLocaleDateString()
-    if ( input.value  == ``) {
+    
+    if ( input.value  == 0) {
         alert(' Nessun valore inserito nel primo riquadro! inserisci testo')
-    }else if (textarea.value == ``) {
+    }else if (textarea.value == 0) {
         alert(' Nessun valore inserito nel secondo riquadro! inserisci testo')
     }else{
         let div = document.createElement('div')
