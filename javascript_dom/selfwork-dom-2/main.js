@@ -1,34 +1,30 @@
+let input = document.querySelector('input')
+let textarea = document.querySelector('textarea')
+let contenitore = document.querySelector('.contenitore')
+let btn = document.querySelector('.btn')
 
-let paragrafi = document.querySelectorAll('p')
-let colorBtn = document.querySelector('#colorBtn')
-let grBtn = document.querySelector('#grBtn')
-let noneBtn = document.querySelector('#noneBtn')
 
 
-colorBtn.addEventListener('click', ()=>{
-    paragrafi.forEach(paragrafo =>{
+
+btn.addEventListener('click',()=>{
+    let date = new Date();
+    let formatDate = date.toLocaleDateString()
+    if ( input.value  == ``) {
+        alert(' Nessun valore inserito nel primo riquadro! inserisci testo')
+    }else if (textarea.value == ``) {
+        alert(' Nessun valore inserito nel secondo riquadro! inserisci testo')
+    }else{
+        let div = document.createElement('div')
+        div.innerHTML= `<h3>${input.value}</h3> <p>${textarea.value}</p> <p>${formatDate}</p>`
         let r = Math.floor(Math.random() * 256);  
         let g = Math.floor(Math.random() * 256);
         let b = Math.floor(Math.random() * 256); 
-       paragrafo.style.color = `rgb(${r},${g},${b})`
-    })
+        div.style.backgroundColor = `rgb(${r},${g},${b})`
+        div.style.border = '2px solid'
+        div.style.marginTop = '15px '
+        contenitore.appendChild(div)
+        input.value = ``
+        textarea.value = ``
+    }
 })
 
-
-grBtn.addEventListener('click', ()=>{
-    paragrafi.forEach(paragrafo =>{
-        paragrafo.style.fontWeight = 'bold'
-    })
-})
-
-
-
-noneBtn.addEventListener('click', ()=>{
-    paragrafi.forEach(paragrafo =>{
-        if (paragrafo.style.display == 'block') {
-            paragrafo.style.display = 'none'
-        } else {
-            paragrafo.style.display = 'block' 
-        }
-    })
-})
