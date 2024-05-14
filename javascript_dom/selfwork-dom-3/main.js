@@ -13,15 +13,11 @@ let counter;
 let remaningSeconds = 0
 
 startBtn.addEventListener('click', ()=>{
-     
     clearInterval(interval);
     counter = inputNumber.value;
 
-    if (remaningSeconds !== 0) {
-        counter = remaningSeconds
-    }
     
-    interval= setInterval(()=>{
+    interval = setInterval(()=>{
         if (counter < 0) {
             clearInterval(interval);
             remaningTime.innerHTML = 'Fine!!'
@@ -30,6 +26,7 @@ startBtn.addEventListener('click', ()=>{
             counter --  
         }
         },1000)  
+       
 });
     
 
@@ -41,7 +38,8 @@ stopBtn.addEventListener('click', ()=>{
 
 resetBtn.addEventListener('click', ()=>{
     inputNumber.value = '';
+    remaningTime.innerHTML = '';
     clearInterval(interval);
-    remaningTime.innerHTML = ''
+    
 });
 
