@@ -18,7 +18,7 @@ startBtn.addEventListener('click', ()=>{
 
     
     interval = setInterval(()=>{
-        if (counter < 0) {
+        if (counter <= 0) {
             clearInterval(interval);
             remaningTime.innerHTML = 'Fine!!'
         }else{
