@@ -16,11 +16,19 @@ startBtn.addEventListener('click', ()=>{
     clearInterval(interval);
     counter = inputNumber.value;
 
+    if (remaningSeconds > 0) {
+        counter = remaningSeconds
+    }
+   
     
     interval = setInterval(()=>{
-        if (counter <= 0) {
+        if (counter === '') {
             clearInterval(interval);
-            remaningTime.innerHTML = 'Fine!!'
+            remaningTime.innerHTML = '--'
+        }else if (counter <= 0) {
+            clearInterval(interval);
+            remaningSeconds = 0;
+            remaningTime.innerHTML = 'Tempo scaduto!!'
         }else{
             remaningTime.innerHTML = counter
             counter --  
@@ -37,9 +45,10 @@ stopBtn.addEventListener('click', ()=>{
 
 
 resetBtn.addEventListener('click', ()=>{
+    clearInterval(interval);
     inputNumber.value = '';
     remaningTime.innerHTML = '';
-    clearInterval(interval);
+    remaningSeconds = '';
     
 });
 
