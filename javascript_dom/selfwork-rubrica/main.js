@@ -11,6 +11,7 @@ let nameInput = document.querySelector('#nameInput');
 let numberInput = document.querySelector('#numberInput');
 
 
+
 // variabile di appoggio
 check = false;
 
@@ -71,12 +72,12 @@ let rubrica = {
       
       
     // modifica contatto
-    changeContact : function (changeName, changeNumber){
+    changeContact : function (nome, numero){
         this.lista_contatti.forEach((contatto) => {
-            if (contatto.contact_name == changeName){
-                contatto.phone_number = newNumber
+            if (contatto.contact_name == nome){
+                contatto.phone_number = numero
             }
-
+            rubrica.showContacts();
         });
     },
     
@@ -113,8 +114,8 @@ removeContactsBtn.addEventListener('click', ()=>{
 
 changeContactsBtn.addEventListener('click', ()=>{
     if (nameInput != ``) {
-        rubrica.changeContact(nameInput.value, numberInput.value)
-        nameInput.value = ''
-        numberInput = ''
+       rubrica.changeContact(nameInput.value, numberInput.value)
+       nameInput.value = ''
+       numberInput.value= ''
     }
 })
