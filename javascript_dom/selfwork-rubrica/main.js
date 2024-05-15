@@ -30,7 +30,7 @@ let rubrica = {
             div.innerHTML= `
                 <p class="lead">${contatto.contact_name}</p>
                 <p class="numero">${contatto.phone_number}</p>
-                <i class="fa-solid fa-trash-can icon"></i>
+                
             `;
             contactsWrapper.appendChild(div);
         });
@@ -71,21 +71,13 @@ let rubrica = {
       
       
     // modifica contatto
-    changeContact : function (changeName){
-        let names = this.lista_contatti.map((contatto)=>contatto.contact_name);
-        let index = names.indexOf(changeName);
-        if (index >= 0) {
-            this.lista_contatti.filter(n,index, ()=>{
-                console.log(true);
-                rubrica.showContacts();
-            }  );
-            if (check == false) {
-                  check = true;  
-                  showContactsBtn.innerHTML = 'Nascondi contatti';
-              }
-          }else{
-              alert('Non hai aggiunto il nome, riprova!' )
-          }
+    changeContact : function (changeName, changeNumber){
+        this.lista_contatti.forEach((contatto) => {
+            if (contatto.contact_name == changeName){
+                contatto.phone_number = newNumber
+            }
+
+        });
     },
     
     
@@ -120,6 +112,9 @@ removeContactsBtn.addEventListener('click', ()=>{
 
 
 changeContactsBtn.addEventListener('click', ()=>{
-    rubrica.changeContact(nameInput.value);
-    nameInput.value = ''
+    if (nameInput != ``) {
+        rubrica.changeContact(nameInput.value, numberInput.value)
+        nameInput.value = ''
+        numberInput = ''
+    }
 })
